@@ -6,6 +6,23 @@
 using namespace std;
 
 
+void circle(float x,float y,int triangleAmount,float radius,int r,int g,int b)
+{
+	
+	glBegin(GL_TRIANGLE_FAN);
+	glColor3ub(r,g,b);
+	float twicePi=2*PI;
+		glVertex2f(x, y); // center of circle
+		for(int i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            x + (radius * cos(i *  twicePi / triangleAmount)),
+			    y + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+}
+
+
 void display()
 {
 	glClearColor(1,1,1,1);
@@ -19,7 +36,7 @@ void display()
 	glVertex2f(-1,.3);
 	glEnd();
 
-	GLfloat x=-.6f; GLfloat y=.7f; GLfloat radius =.1f;
+	GLfloat x=-.8f; GLfloat y=.9f; GLfloat radius =.1f;
 	int triangleAmount = 100; //# of triangles used to draw circle
 
 	//GLfloat radius = 0.8f; //radius
@@ -38,10 +55,10 @@ void display()
 
 
 	glBegin(GL_QUADS);  //green back
-	glColor3ub(0,153,0);
+	glColor3ub(153,255,51);
 	glVertex2f(1,-.1);
-	glVertex2f(1,.3);
-	glVertex2f(-1,.3);
+	glVertex2f(1,.2);
+	glVertex2f(-1,.2);
 	glVertex2f(-1,-.1);
 	glEnd();
 
@@ -191,6 +208,36 @@ void display()
 	glVertex2f(-.3,.5);
 	glEnd();
 
+	glBegin(GL_QUADS);  //tree
+	glColor3ub(153, 51, 51);
+	glVertex2f(-.5,-.2);
+	glVertex2f(-.5,.4);
+	glVertex2f(-.6,.4);
+	glVertex2f(-.6,-.2);
+	glEnd();
+
+	circle(-.55,.5,20,.2,0,153,0);
+	circle(-.6,.4,20,.156,0,153,0);
+	glTranslatef(-.07,.09,0);
+	circle(-.6,.4,20,.156,0,153,0);
+	glLoadIdentity();
+	circle(-.55,.6,20,.2,0,153,0);
+
+	glScalef(.5,.5,0);
+	glBegin(GL_QUADS);  //tree
+	glColor3ub(153, 51, 51);
+	glVertex2f(-.5,-.2);
+	glVertex2f(-.5,.4);
+	glVertex2f(-.6,.4);
+	glVertex2f(-.6,-.2);
+	glEnd();
+	circle(-.55,.5,20,.2,0,153,0);
+	circle(-.6,.4,20,.156,0,153,0);
+	glTranslatef(-.07,.09,0);
+	circle(-.6,.4,20,.156,0,153,0);
+	glScalef(.5,.5,0);
+	glLoadIdentity();
+	circle(-.55,.6,20,.2,0,153,0);
 
 
 
@@ -198,7 +245,63 @@ void display()
 	glFlush();
 }
 
+//void display()
+//{
+//	glClearColor(1,1,1,1);
+//	glClear(GL_COLOR_BUFFER_BIT);
+//
+	 /*glBegin(GL_LINES);
+	 glColor3ub(102,0,0);
+	 glVertex2f(0,0);
+	 glVertex2f(.3,.3);
+	 glEnd();
 
+	 glTranslatef(.2,0,0);
+	 glBegin(GL_LINES);
+	 glColor3ub(102,0,0);
+	 glVertex2f(0,0);
+	 glVertex2f(.3,.3);
+	 glEnd();*/
+
+	//glBegin(GL_QUADS);  //green back
+	//glColor3ub(0,153,0);
+	//glVertex2f(1,-.1);
+	//glVertex2f(1,.3);
+	//glVertex2f(-1,.3);
+	//glVertex2f(-1,-.1);
+	//glEnd();
+
+	//glTranslatef(1,-.7,0);
+	//glBegin(GL_QUADS);  //green back
+	//glColor3ub(0,153,0);
+	//glVertex2f(1,-.1);
+	//glVertex2f(1,.3);
+	//glVertex2f(-1,.3);
+	//glVertex2f(-1,-.1);
+	//glEnd();
+
+
+	//glBegin(GL_QUADS);  //station
+	//glColor3ub(204, 51, 51);
+	//glVertex2f(.6,-.1);
+	//glVertex2f(.6,.5);
+	//glVertex2f(-.2,.5);
+	//glVertex2f(-.2,-.1);
+	//glEnd();
+	 
+	//glBegin(GL_POLYGON);  //station
+	//glColor3ub(204, 102, 0);
+	//glVertex2f(.7,.5);
+	//glVertex2f(.6,.6);
+	//glVertex2f(-.2,.6);
+	//glVertex2f(-.3,.5);
+	//glEnd();
+
+//	
+//	circle(0,0,20,.5,0,0,0);
+//
+//	glFlush();
+//}
 
 int main(int argc,char** argv)
 {
