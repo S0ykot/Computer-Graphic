@@ -96,11 +96,19 @@ void display()
 
 
 	glBegin(GL_QUADS);  //path4
-	glColor3ub(1,1,1);
+	glColor3ub(203,162,153);
 	glVertex2f(1,-.6);
 	glVertex2f(1,-.4);
 	glVertex2f(-1,-.4);
 	glVertex2f(-1,-.6);
+	glEnd();
+
+	glBegin(GL_QUADS);  //path5
+	glColor3ub(1,1,1);
+	glVertex2f(1,-.9);
+	glVertex2f(1,-.6);
+	glVertex2f(-1,-.6);
+	glVertex2f(-1,-.9);
 	glEnd();
 
 
@@ -240,68 +248,50 @@ void display()
 	circle(-.55,.6,20,.2,0,153,0);
 
 
+	glBegin(GL_QUADS);  //window1
+	glColor3ub(144, 140, 139);
+	glVertex2f(.12,.1);
+	glVertex2f(.12,.3);
+	glVertex2f(-.1,.3);
+	glVertex2f(-.1,.1);
+	glEnd();
+
+
+	glTranslatef(.4,.001,0);
+	glBegin(GL_QUADS);  //window1
+	glColor3ub(144, 140, 139);
+	glVertex2f(.12,.1);
+	glVertex2f(.12,.3);
+	glVertex2f(-.1,.3);
+	glVertex2f(-.1,.1);
+	glEnd();
+	glLoadIdentity();
+
+	glBegin(GL_QUADS);  //rail path
+	glColor3ub(144, 140, 139);
+	glVertex2f(-.7,-.86);
+	glVertex2f(-.7,-.6);
+	glVertex2f(-1,-.6);
+	glVertex2f(-1,-.86);
+	glEnd();
+
+	glTranslatef(-.6,-.7,0);
+	glBegin(GL_QUADS);  //rail path
+	glColor3ub(144, 140, 139);
+	glVertex2f(-.7,-.86);
+	glVertex2f(-.7,-.6);
+	glVertex2f(-1,-.6);
+	glVertex2f(-1,-.86);
+	glEnd();
+
+
+
+
 
 
 	glFlush();
 }
 
-//void display()
-//{
-//	glClearColor(1,1,1,1);
-//	glClear(GL_COLOR_BUFFER_BIT);
-//
-	 /*glBegin(GL_LINES);
-	 glColor3ub(102,0,0);
-	 glVertex2f(0,0);
-	 glVertex2f(.3,.3);
-	 glEnd();
-
-	 glTranslatef(.2,0,0);
-	 glBegin(GL_LINES);
-	 glColor3ub(102,0,0);
-	 glVertex2f(0,0);
-	 glVertex2f(.3,.3);
-	 glEnd();*/
-
-	//glBegin(GL_QUADS);  //green back
-	//glColor3ub(0,153,0);
-	//glVertex2f(1,-.1);
-	//glVertex2f(1,.3);
-	//glVertex2f(-1,.3);
-	//glVertex2f(-1,-.1);
-	//glEnd();
-
-	//glTranslatef(1,-.7,0);
-	//glBegin(GL_QUADS);  //green back
-	//glColor3ub(0,153,0);
-	//glVertex2f(1,-.1);
-	//glVertex2f(1,.3);
-	//glVertex2f(-1,.3);
-	//glVertex2f(-1,-.1);
-	//glEnd();
-
-
-	//glBegin(GL_QUADS);  //station
-	//glColor3ub(204, 51, 51);
-	//glVertex2f(.6,-.1);
-	//glVertex2f(.6,.5);
-	//glVertex2f(-.2,.5);
-	//glVertex2f(-.2,-.1);
-	//glEnd();
-	 
-	//glBegin(GL_POLYGON);  //station
-	//glColor3ub(204, 102, 0);
-	//glVertex2f(.7,.5);
-	//glVertex2f(.6,.6);
-	//glVertex2f(-.2,.6);
-	//glVertex2f(-.3,.5);
-	//glEnd();
-
-//	
-//	circle(0,0,20,.5,0,0,0);
-//
-//	glFlush();
-//}
 
 int main(int argc,char** argv)
 {
