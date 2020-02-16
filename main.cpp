@@ -103,13 +103,7 @@ void display()
 	glVertex2f(-1,-.6);
 	glEnd();
 
-	glBegin(GL_QUADS);  //path5
-	glColor3ub(1,1,1);
-	glVertex2f(1,-.9);
-	glVertex2f(1,-.6);
-	glVertex2f(-1,-.6);
-	glVertex2f(-1,-.9);
-	glEnd();
+	
 
 
 	glBegin(GL_QUADS);  //signal 
@@ -182,24 +176,6 @@ void display()
 	glEnd();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	glBegin(GL_QUADS);  //station
 	glColor3ub(204, 51, 51);
 	glVertex2f(.6,-.1);
@@ -267,26 +243,277 @@ void display()
 	glEnd();
 	glLoadIdentity();
 
-	glBegin(GL_QUADS);  //rail path
-	glColor3ub(144, 140, 139);
-	glVertex2f(-.7,-.86);
-	glVertex2f(-.7,-.6);
-	glVertex2f(-1,-.6);
-	glVertex2f(-1,-.86);
-	glEnd();
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(1,-0.6);
+	glVertex2f(-1,-0.6);
+	glVertex2f(-1,-0.67);
+	glVertex2f(1,-0.67);
+    glEnd();
 
-	glTranslatef(-.6,-.7,0);
-	glBegin(GL_QUADS);  //rail path
-	glColor3ub(144, 140, 139);
-	glVertex2f(-.7,-.86);
-	glVertex2f(-.7,-.6);
-	glVertex2f(-1,-.6);
-	glVertex2f(-1,-.86);
-	glEnd();
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(1,-1);
+	glVertex2f(-1,-1);
+	glVertex2f(-1,-0.93);
+	glVertex2f(1,-0.93);
+    glEnd();
+
+	glBegin(GL_QUADS);		//train line back
+    glColor3ub(194, 194, 163);
+	glVertex2f(1,-0.67);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(1,-0.93);
+    glEnd();
+
+	
+
+	glBegin(GL_QUADS);		
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+
+	glTranslatef(0.25,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(0.5,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(0.75,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(1,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(1.25,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(1.5,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(1.75,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(2,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(2.25,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(2.5,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(2.75,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(3,0,0);
+	glBegin(GL_QUADS);		//train line
+    glColor3ub(0, 0, 0);
+	glVertex2f(-1,-0.67);
+	glVertex2f(-1,-0.93);
+	glVertex2f(-0.97,-0.93);
+	glVertex2f(-0.97,-0.67);
+    glEnd();
+	glLoadIdentity();
+
+	glBegin(GL_QUADS);		//train1
+    glColor3ub(51, 204, 204);
+	glVertex2f(0.95,-.86);
+	glVertex2f(0.95,-0.55);
+	glVertex2f(0.375,-0.55);
+	glVertex2f(0.375,-0.86);
+    glEnd();
 
 
+	glBegin(GL_QUADS);		//train1
+    glColor3ub(204, 51, 0);
+	glVertex2f(0.85,-0.55);
+	glVertex2f(0.85,-0.35);
+	glVertex2f(0.6375,-0.35);
+	glVertex2f(0.6375,-0.55);
+    glEnd();
+
+	glBegin(GL_QUADS);		//train1
+    glColor3ub(0,0 , 0);
+	glVertex2f(0.735,-0.35);
+	glVertex2f(0.825,-0.35);
+	glVertex2f(0.825,-0.25);
+	glVertex2f(0.735,-0.25);
+    glEnd();
+
+	glBegin(GL_QUADS);		//train1
+    glColor3ub(0, 51, 102);
+	glVertex2f(0.6375,-0.55);
+	glVertex2f(0.6375,-0.15);
+	glVertex2f(0.425,-0.15);
+	glVertex2f(0.425,-0.55);
+    glEnd();
+
+	glBegin(GL_QUADS);		//train connector
+    glColor3ub(255, 121, 77);
+	glVertex2f(0.375,-0.76);
+	glVertex2f(0.375,-0.68);
+	glVertex2f(0.225,-0.68);
+	glVertex2f(0.225,-0.76);
+    glEnd();
+
+	
+
+	glBegin(GL_QUADS);		//train2
+    glColor3ub(0, 153, 204);
+	glVertex2f(0.23,-.86);
+	glVertex2f(0.225,-0.25);
+	glVertex2f(-0.325,-0.25);
+	glVertex2f(-0.325,-0.86);
+    glEnd();
+
+	glBegin(GL_QUADS);		//train2 window1
+    glColor3ub(224, 235, 235);
+	glVertex2f(-0.25,-0.55);
+	glVertex2f(-0.1,-0.55);
+	glVertex2f(-0.1,-0.35);
+	glVertex2f(-0.25,-0.35);
+    glEnd();
+
+	glTranslatef(0.25,0,0);
+	glBegin(GL_QUADS);		//train2 window2
+    glColor3ub(224, 235, 235);
+	glVertex2f(-0.25,-0.55);
+	glVertex2f(-0.1,-0.55);
+	glVertex2f(-0.1,-0.35);
+	glVertex2f(-0.25,-0.35);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(-0.7,0,0);
+	glBegin(GL_QUADS);		//train connector
+    glColor3ub(255, 121, 77);
+	glVertex2f(0.375,-0.76);
+	glVertex2f(0.375,-0.68);
+	glVertex2f(0.225,-0.68);
+	glVertex2f(0.225,-0.76);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(-0.7,0,0);
+	glBegin(GL_QUADS);		//train3
+    glColor3ub(0, 153, 204);
+	glVertex2f(0.225,-.86);
+	glVertex2f(0.225,-0.25);
+	glVertex2f(-0.325,-0.25);
+	glVertex2f(-0.325,-0.86);
+    glEnd();
+	glLoadIdentity();
+
+	glTranslatef(-0.45,0,0);
+	glBegin(GL_QUADS);		//train3 window1
+    glColor3ub(224, 235, 235);
+	glVertex2f(-0.25,-0.55);
+	glVertex2f(-0.1,-0.55);
+	glVertex2f(-0.1,-0.35);
+	glVertex2f(-0.25,-0.35);
+    glEnd();
+    glLoadIdentity();
+
+	glTranslatef(-0.7,0,0);
+	glBegin(GL_QUADS);		//train3 window2
+    glColor3ub(224, 235, 235);
+	glVertex2f(-0.25,-0.55);
+	glVertex2f(-0.1,-0.55);
+	glVertex2f(-0.1,-0.35);
+	glVertex2f(-0.25,-0.35);
+    glEnd();
+	glLoadIdentity();
 
 
+	//Wheel of train
+	circle(0.8,-0.88,100,0.105,255,255,204);
+	circle(0.53,-0.88,100,0.105,255,255,204);
+	circle(0.075,-0.88,100,0.105,255,255,204);
+	circle(-0.175,-0.88,100,0.105,255,255,204);
+	circle(-0.605,-0.88,100,0.105,255,255,204);
+	circle(-0.855,-0.88,100,0.105,255,255,204);
 
 
 	glFlush();
