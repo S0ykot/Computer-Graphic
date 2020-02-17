@@ -5,7 +5,12 @@
 
 using namespace std;
 
+void Idle()
+{
+	glutPostRedisplay();
+}
 
+GLfloat rot = 0;
 void circle(float x,float y,int triangleAmount,float radius,int r,int g,int b)
 {
 	
@@ -515,6 +520,45 @@ void display()
 	circle(-0.605,-0.88,100,0.105,255,255,204);
 	circle(-0.855,-0.88,100,0.105,255,255,204);
 
+	glTranslatef(-0.15,.6,0);
+	glScalef(1,1.5,0);
+	glBegin(GL_QUADS);  //winghill stand
+	glColor3ub(140, 140, 140);
+	glVertex2f(.91,-.2);
+	glVertex2f(.91,.1);
+	glVertex2f(.88,.1);
+	glVertex2f(.88,-.2);
+	glEnd();
+	glLoadIdentity();
+
+
+	glPushMatrix();
+    glRotatef(rot,0,0,1);
+	glTranslatef(.75,.8,0);
+	glScalef(.5,.5,0);
+	glBegin(GL_TRIANGLES);
+	glColor3ub(140, 140, 140);
+	glVertex2f(.1,0);
+	glVertex2f(.2,.2);
+	glVertex2f(0,0.1);
+	glBegin(GL_TRIANGLES);
+	glVertex2f(0,0.1);
+	glVertex2f(-.2,.2);
+	glVertex2f(-.1,0);
+	glBegin(GL_TRIANGLES);
+	glVertex2f(0,-.1);
+	glVertex2f(-.1,0);
+	glVertex2f(-.2,-.2);
+	glBegin(GL_TRIANGLES);
+	glVertex2f(.2,-.2);
+	glVertex2f(.1,0);
+	glVertex2f(0,-.1);
+	glEnd();
+	circle(0,0,10,.1,140,140,140);
+
+	glPopMatrix();
+	rot+=0.2;
+
 
 	glFlush();
 }
@@ -526,6 +570,7 @@ int main(int argc,char** argv)
 	glutCreateWindow("CG");
 	glutInitWindowSize(320,320);
 	glutDisplayFunc(display);
+	glutIdleFunc(Idle);
 	glutMainLoop();
 	return 0;
 }
